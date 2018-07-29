@@ -113,6 +113,7 @@ void wait_for_running_children_to_be_under_limit(set<pid_t> &running_child_pids,
 			  running_child_pids.erase(ChildPID);
 			}
 		}
+		sleep(1); // TODO: Use condition variables.
 	}	
 }
 
